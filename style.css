@@ -58,13 +58,23 @@ border-bottom: 150px solid #333;
   height: 38px;
   display: block;            
 }
-
-@media (max-width: 1024px) 
-{
-  .cards { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 2fr;
+  }
 }
-
-@media (max-width: 640px) 
-{
-  .cards { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (orientation: landscape) and (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (orientation: portrait) and (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
